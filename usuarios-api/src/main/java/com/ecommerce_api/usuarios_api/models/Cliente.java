@@ -25,10 +25,9 @@ public class Cliente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
     @OneToOne
     @JoinColumn(nullable = false)
-    private Usuarios usuarios;
+    private Usuario usuario;
 
     @Column(nullable = false, unique = true, length = 11)
     private String cpf;

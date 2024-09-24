@@ -16,7 +16,7 @@ public interface ClienteRepository  extends JpaRepository<Cliente, Long> {
 
     List<Cliente> findByDataNascimentoBetween(LocalDate dataInicial, LocalDate dataFinal);
 
-    Optional<Cliente> findByUsuarios_Email(String email);
+    Optional<Cliente> findByUsuario_Email(String email);
 
     List<Cliente> findByUsuario_NomeContainsIgnoreCase(String nome);
 

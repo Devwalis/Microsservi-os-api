@@ -1,6 +1,5 @@
-package com.ecommerce_api.usuarios_api.models;
+package com.ecommerce_api.usuarios_api.dto;
 
-import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,16 +7,12 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Embeddable
-public class Endereco {
-
+public class EnderecoDTO {
+    
     private String cep;
     private String logradouro;
-    private String cidade;
+    private String localidade;
     private String uf;
     private String bairro;
-    private String numero;
-    private String complemento;
-    
-    
+
 }
