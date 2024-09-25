@@ -1,10 +1,11 @@
 package com.ecommerce_api.usuarios_api.service;
 
 import java.util.List;
-import java.util.Optional;
+
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.ecommerce_api.usuarios_api.models.Cliente;
@@ -24,14 +25,14 @@ public Cliente salvarCliente(Cliente cliente){
   //Criptografar a senha para persistir no bancco
   BCryptPasswordEncoder encoder = autenticacaoService.getPasswordEncoder();
 
-  String senhaCriptografarda = encoder.encode(senha);
+  String senhaCriptografada = encoder.encode(senha);
 
   cliente.getUsuario().setSenha(senhaCriptografada);
 
   //buscar detalhes do enderecço pelo CEP
   Endereco endereco = cliente.getEndereco();
 
-  EnderecoDTO enderecoDTO = enderecoService.buuscarEnderecoPeloCEP(endereco.getCep());
+  EnderecoDTO enderecoDTO = enderecoService.buscarEnderecoPeloCEP(endereco.getCep());
 
   endereco.setBairro(enderecoDTO.getBairro());
   endereco.setCidade(enderecoDTO.getLocalidade());
@@ -43,15 +44,20 @@ public Cliente salvarCliente(Cliente cliente){
   cliente.setUsuario(usuario);
 
   return clienteRepository.save(cliente);
-
-  
 }
 
+  public List<Cliente> listarClientes(){
+    return clienteRepository.findAll();
+  }
+  //Demais métodoss aqui...
 
 
 
-}
- 
+
+
+
+
+
 
 
 
@@ -63,4 +69,6 @@ private UsuarioRepository usuarioRepository;
 
 @Autowired
 private EnderecoService enderecoService;
+@Autowired
+  private AutenticacaoService autenticacaoService;
 }
