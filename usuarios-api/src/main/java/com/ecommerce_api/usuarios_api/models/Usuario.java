@@ -2,7 +2,7 @@ package com.ecommerce_api.usuarios_api.models;
 
 import com.ecommerce_api.usuarios_api.dto.UsuarioDTO;
 
-import org.hibernate.annotations.DialectOverride.OverridesAnnotation;
+
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
