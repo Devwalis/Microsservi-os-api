@@ -49,8 +49,8 @@ public class SecurityFilter  extends OncePerRequestFilter {
 
         }
 
-        private String _obterTokenDaRequisicao(HttpServletRequest requiscao){
-            String authorization = requiscao.getHeader("Authorization");
+        private String _obterTokenDaRequisicao(HttpServletRequest requisicao){
+            String authorization = requisicao.getHeader("Authorization");
 
             if(Objects.nonNull(authorization)){
                 //Bearer
