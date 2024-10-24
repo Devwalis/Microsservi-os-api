@@ -1,5 +1,9 @@
 package com.ecommerce.produtos.api.produtos_api.service;
 
+
+
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +18,15 @@ public class ProdutoService {
 
     public Produto salvarProduto(Produto produto){
         return produtoRepository.save(produto);
+    }
+
+    public Produto buscarProdutoPeloCodigo(String codigo){
+        Optional<Produto> produto = produtoRepository.findByCodigo(codigo);
+
+        if(produto.isPresent()){
+            return produto.get();
+        }
+        return null;
     }
 
 
