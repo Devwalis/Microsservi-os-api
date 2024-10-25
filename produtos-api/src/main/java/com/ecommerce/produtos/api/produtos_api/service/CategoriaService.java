@@ -1,5 +1,7 @@
 package com.ecommerce.produtos.api.produtos_api.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +16,10 @@ public class CategoriaService {
 
     public Categoria salvarCategoria(Categoria categoria){
         return categoriaRepository.save(categoria);
+    }
+
+    public List<Categoria> listarCategorias(){
+        return categoriaRepository.findAll();
     }
     
 }
