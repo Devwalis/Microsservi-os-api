@@ -1,8 +1,10 @@
 package com.ecommerce.produtos.api.produtos_api.service;
 
-
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 import java.util.Optional;
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,6 +31,10 @@ public class ProdutoService {
         return null;
     }
 
+    public Page<Produto> listarProdutosPorCategoria(Pageable paginacao, Long idCategoria){
+        return produtoRepository.findByCategoria_Id(paginacao, idCategoria);
+        
+    }
 
 
     
