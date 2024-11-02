@@ -17,7 +17,5 @@ public class UsuarioDTO {
     private Boolean usuarioExterno;
     private String token;
 
-
-
     
 }
