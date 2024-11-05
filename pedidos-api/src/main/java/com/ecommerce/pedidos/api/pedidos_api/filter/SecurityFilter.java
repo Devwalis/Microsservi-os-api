@@ -17,12 +17,13 @@ import org.springframework.web.filter.OncePerRequestFilter;
 
 import com.ecommerce.pedidos.api.pedidos_api.context.UsuarioContext;
 import com.ecommerce.web.client.web_client.exception.AutenticacaoException;
+import com.ecommerce.web.client.web_client.usuario.UsuarioDTO;
 
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import main.java.com.ecommerce.web.client.web_client.usuario.UsuarioDTO;
+
 
 @Component
 public class SecurityFilter extends OncePerRequestFilter {

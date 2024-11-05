@@ -1,0 +1,12 @@
+{"properties": [
+  {
+    "name": "usuarios.ws.url",
+    "type": "java.lang.String",
+    "description": "A description for 'usuarios.ws.url'"
+  },
+  {
+    "name": "produtos.ws.url",
+    "type": "java.lang.String",
+    "description": "A description for 'produtos.ws.url'"
+  }
+]}

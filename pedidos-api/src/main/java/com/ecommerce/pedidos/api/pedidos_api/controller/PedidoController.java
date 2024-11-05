@@ -19,6 +19,9 @@ import com.ecommerce.web.client.web_client.pedido.ItemDTO;
 import com.ecommerce.web.client.web_client.pedido.PedidoDTO;
 import com.ecommerce.web.client.web_client.produto.ProdutoDTO;
 import com.ecommerce.web.client.web_client.usuario.ClienteDTO;
+import com.ecommerce.web.client.web_client.usuario.UsuarioDTO;
+
+
 
 
 @RestController
@@ -27,7 +30,7 @@ public class PedidoController {
 
     @PostMapping
     public ResponseEntity<PedidoDTO> cadastrarPedido(@RequestBody Pedido pedido) {
-        main.java.com.ecommerce.web.client.web_client.usuario.UsuarioDTO usuarioDTO = usuarioContext.getUsuarioDTO();
+        UsuarioDTO usuarioDTO = usuarioContext.getUsuarioDTO();
 
 
         if (!usuarioDTO.getAdministrador()){

@@ -7,6 +7,8 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import com.ecommerce.web.client.web_client.usuario.UsuarioDTO;
+
 import java.util.Collection;
 import java.util.List;
 import jakarta.persistence.Column;
@@ -16,7 +18,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import main.java.com.ecommerce.web.client.web_client.usuario.UsuarioDTO;
+
 
 
 

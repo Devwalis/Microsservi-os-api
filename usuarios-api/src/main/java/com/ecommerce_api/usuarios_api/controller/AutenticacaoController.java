@@ -12,10 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ecommerce.web.client.web_client.usuario.AutenticacaoDTO;
+import com.ecommerce.web.client.web_client.usuario.UsuarioDTO;
 import com.ecommerce_api.usuarios_api.models.Usuario;
 import com.ecommerce_api.usuarios_api.service.TokenService;
 
-import main.java.com.ecommerce.web.client.web_client.usuario.UsuarioDTO;
+
 
 @RestController
 @RequestMapping("/auth")
