@@ -8,12 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.ecommerce.web.client.web_client.usuario.EnderecoDTO;
 import com.ecommerce_api.usuarios_api.models.Cliente;
 import com.ecommerce_api.usuarios_api.models.Endereco;
 import com.ecommerce_api.usuarios_api.models.Usuario;
 import com.ecommerce_api.usuarios_api.repository.ClienteRepository;
 import com.ecommerce_api.usuarios_api.repository.UsuarioRepository;
-import com.ecommerce_api.usuarios_api.dto.EnderecoDTO;
+
 
 
 @Service
