@@ -1,4 +1,8 @@
-package main.java.com.arquivos.api.arquivos_api.model;
+package com.arquivos.api.arquivos_api.model;
+
+import java.time.LocalDateTime;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -27,7 +31,7 @@ public class Arquivo {
 
     @Column(nullable = false)
     @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
-    private LocalDataTime dataHoraEnvio;
+    private LocalDateTime dataHoraEnvio;
 
     @Column(nullable = false, columnDefinition = "TEXT")
     private String caminho; 
