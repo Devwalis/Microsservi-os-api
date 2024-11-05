@@ -1,11 +1,13 @@
 package com.ecommerce_api.usuarios_api.models;
 
-import com.ecommerce_api.usuarios_api.dto.UsuarioDTO;
+
 
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+
+import com.ecommerce.web.client.web_client.usuario.UsuarioDTO;
 
 import java.util.Collection;
 import java.util.List;
@@ -16,6 +18,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+
 
 
 
