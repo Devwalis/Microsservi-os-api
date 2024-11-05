@@ -1,5 +1,17 @@
-package main.java.com.arquivos.api.arquivos_api.model;
+package com.arquivos.api.arquivos_api.model;
 
+import java.time.LocalDateTime;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
@@ -8,7 +20,7 @@ package main.java.com.arquivos.api.arquivos_api.model;
 public class Arquivo {
 
     @Id
-    @GeneratedValue(strategy = GenerattionType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(nullable = false, unique = true)
@@ -17,11 +29,11 @@ public class Arquivo {
     @Column(nullable = false)
     private String tipo;
 
-    @Column(nullbale = false)
+    @Column(nullable = false)
     @JsonFormat(pattern = "dd/MM/yyyy HH:mm:ss")
-    private LocalDataTime dataHoraEnvio;
+    private LocalDateTime dataHoraEnvio;
 
-    @Column(nullble = false, columnDefinition = "TEXT")
+    @Column(nullable = false, columnDefinition = "TEXT")
     private String caminho; 
 
 

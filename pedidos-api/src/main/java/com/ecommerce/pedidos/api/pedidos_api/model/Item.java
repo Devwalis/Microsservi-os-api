@@ -4,6 +4,7 @@ import com.ecommerce.web.client.web_client.pedido.ItemDTO;
 import com.ecommerce.web.client.web_client.produto.ProdutoDTO;
 
 import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -14,7 +15,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-
+@Entity(name = "tb_itens")
 public class Item {
 
 

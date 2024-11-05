@@ -4,7 +4,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import com.ecommerce_api.usuarios_api.dto.EnderecoDTO;
+import com.ecommerce.web.client.web_client.usuario.EnderecoDTO;
+
+
 
 
 @Service
