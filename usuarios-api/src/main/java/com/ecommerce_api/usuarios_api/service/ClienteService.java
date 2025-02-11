@@ -2,8 +2,6 @@ package com.ecommerce_api.usuarios_api.service;
 
 import java.util.List;
 
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -50,8 +48,7 @@ public Cliente salvarCliente(Cliente cliente){
   public List<Cliente> listarClientes(){
     return clienteRepository.findAll();
   }
-  //Demais métodoss aqui...
-
+ 
 
 
 

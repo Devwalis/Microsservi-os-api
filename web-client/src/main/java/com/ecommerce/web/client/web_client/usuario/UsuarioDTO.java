@@ -13,10 +13,11 @@ public class UsuarioDTO {
     private String email;
     private String telefone;
     private String celular;
-    private Boolean administrador;
-    private Boolean colaborador;
-    private Boolean usuarioExterno;
+    private String cpf;
+    private String dataNascimento;
+    private String tipoUsuario;
     private String token;
+
 
     
 }
